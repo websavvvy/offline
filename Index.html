@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Tools</h2>
+            <ul class="menu">
+                <li><a href="#upload">Offline Extractor</a></li>
+                <!-- <li><a href="#extract">Offline Extraction</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#help">Help</a></li> -->
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>Offline Extractor</h1>
+            <div class="button-container">
+                <button id="uploadBtn" class="btn upload-btn">Upload File</button>
+                <input type="file" id="excelFileInput" accept=".xlsx" hidden>
+                <button id="processBtn" class="btn process-btn">Extract Offline</button>
+            </div>
+            <div id="fileName" class="file-name"></div>
+            <div id="notification" class="notification hidden"></div>
+            <div id="progress" class="progress hidden">
+                <div class="progress-bar"></div>
+            </div>
+            <pre id="output"></pre>
+            <canvas id="chartCanvas" width="400" height="200"></canvas>
+            <button id="downloadBtn" class="down-btn">↓</button>
+            
+            </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
